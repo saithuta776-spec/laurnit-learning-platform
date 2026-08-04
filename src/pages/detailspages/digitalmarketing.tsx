@@ -234,7 +234,7 @@ export default function djmarket() {
               <div className="flex-1 space-y-2">
                 <div className="">
                   <Link
-                    to="/instructors/htetwai"
+                    to="/instructors/chanAye"
                     className="text-base font-bold text-gray-900"
                   >
                     {digitalMarketing.instructor}

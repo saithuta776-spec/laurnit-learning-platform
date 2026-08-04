@@ -1,63 +1,84 @@
+import MfImg from "@/assets/forDetail/mobile.jpg"; // Adjust import path if needed
 import { useState } from "react";
 import { Link } from "react-router";
-import startup from "@/assets/forDetail/startup.jpg";
 
-const startupEntrepreneurship = {
-  title: "Startup Entrepreneurship",
+const mobileAppDevData = {
+  title: "Mobile App Development Professional Certificate",
   description:
-    "Transform innovative ideas into scalable business models. Learn lean startup methodologies, market validation, fundraising fundamentals, and operational execution to build and launch a successful enterprise.",
-  category: "Business",
-  instructor: "Tr Cho Cho Kha",
-  instructorRole: "Venture Strategist · Startup Mentor",
+    "Master cross-platform mobile app development with modern frameworks like Flutter & React Native. Build production-ready, high-performance mobile applications for iOS and Android with scalable backends and seamless UI/UX.",
+  category: "Computer Science",
+  instructor: "Sayar Nay Win Naing",
+  instructorLink: "/instructors/naywinnaing",
+  instructorRole: "Mobile Architecture Lead · Senior App Developer",
   instructorBio:
-    "Tr Cho Cho Kha brings extensive experience mentoring early-stage founders and guiding venture development. She specializes in business model innovation, lean execution, and investor pitch preparation.",
-  price: "600,000 Ks",
-  originalPrice: "800,000 Ks",
-  discount: "25% off",
-  image: startup,
+    "Sayar Nay Win Naing has extensive industry experience engineering high-performance mobile applications for enterprise and consumer markets. He specializes in cross-platform development, state management, and mobile API integration.",
+  price: "800,000 Ks",
+  originalPrice: "1,000,000 Ks",
+  discount: "20% off",
+  image: MfImg,
   includes: [
-    "3.5 months complete program",
-    "60+ hours on-demand video",
-    "20 startup toolkits & financial models",
-    "Pitch deck templates & investor guidelines",
+    "65+ hours on-demand video",
+    "48 downloadable resources",
+    "18 hands-on coding exercises",
     "Full lifetime access",
+    "Access on mobile and desktop",
     "Certificate of completion",
   ],
   series: [
     {
-      id: 601,
+      id: 201,
       number: "Course 1",
-      title: "Ideation, Problem-Market Fit & Validation",
+      title: "Mobile UI/UX Foundations & Layout Engineering",
       lessons: [
-        "Identifying Market Opportunities & Unmet Needs (15:30)",
-        "The Lean Startup Framework & Customer Discovery (22:15)",
-        "Building & Testing Minimum Viable Products (MVP) (26:40)",
+        "Mobile App Architecture & Design Systems (15:10)",
+        "Building Responsive Widgets & Layouts (18:30)",
+        "Navigation & Screen Routing Patterns (14:45)",
       ],
     },
     {
-      id: 602,
+      id: 202,
       number: "Course 2",
-      title: "Business Model Canvas & Go-To-Market Execution",
+      title: "State Management & Asynchronous Data",
       lessons: [
-        "Designing the Business Model Canvas (BMC) (24:10)",
-        "Revenue Streams, Cost Structures & Unit Economics (28:05)",
-        "Customer Acquisition Channels & Launch Strategy (20:45)",
+        "App State Management Architecture (20:15)",
+        "Handling REST APIs & Asynchronous Requests (22:40)",
+        "Local Storage, Caching & Offline Persistence (17:30)",
       ],
     },
     {
-      id: 603,
+      id: 203,
       number: "Course 3",
-      title: "Startup Finance, Fundraising & Pitching",
+      title: "Backend Services & Firebase Integration",
       lessons: [
-        "Financial Forecasting & Cash Flow Management (25:50)",
-        "Types of Funding: Bootstrap, Seed & Venture Capital (21:30)",
-        "Crafting a Winning Investor Pitch Deck & Capstone Pitch (35:00)",
+        "Firebase Authentication & User Sessions (18:20)",
+        "Realtime Cloud Firestore & Database Queries (25:10)",
+        "Push Notifications & Cloud Messaging (19:00)",
+      ],
+    },
+    {
+      id: 204,
+      number: "Course 4",
+      title: "Native Features, Hardware Access & Performance",
+      lessons: [
+        "Accessing Camera, GPS & Device Hardware (21:15)",
+        "App Performance Optimization & Memory Management (16:40)",
+        "Securing Mobile Data & API Keys (15:50)",
+      ],
+    },
+    {
+      id: 205,
+      number: "Course 5",
+      title: "Production Deployment to App Store & Google Play",
+      lessons: [
+        "Configuring iOS App Store & Android Play Console (22:30)",
+        "App Bundles, Release Signing & CI/CD Pipelines (28:10)",
+        "Final Capstone Mobile App Deployment (40:00)",
       ],
     },
   ],
 };
 
-export default function Startup() {
+export default function MobileApp() {
   // Accordion State: Stores IDs of opened sub-courses
   const [expandedSeriesIds, setExpandedSeriesIds] = useState<number[]>([101]);
 
@@ -72,7 +93,7 @@ export default function Startup() {
   };
 
   // Get current active specialization configuration data
-  const data = startupEntrepreneurship;
+  const data = mobileAppDevData;
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Breadcrumb Navigation */}
@@ -209,15 +230,15 @@ export default function Startup() {
             <h3 className="text-xl font-black">Your instructor</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-300 text-xl font-black text-white shadow-sm">
-                {data.instructor.charAt(3)}
+                {data.instructor.charAt(6)}
               </div>
               <div className="flex-1 space-y-2">
                 <div className="">
                   <Link
-                    to="/instructors/choChoKha"
+                    to="/instructors/nayWinNaing"
                     className="text-base font-bold text-gray-900"
                   >
-                    {startupEntrepreneurship.instructor}
+                    {mobileAppDevData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
                     {data.instructorRole}

@@ -10,6 +10,23 @@ import Marketing from "./detailspages/intromarket";
 import Startup from "./detailspages/startup";
 import Adobe from "./detailspages/adobe";
 import UiUx from "./detailspages/uiux";
+import MobileApp from "./detailspages/mobileApp";
+import DataScience from "./detailspages/data-science";
+import AiIntro from "./detailspages/ai";
+import AiForBusiness from "./detailspages/aiForBusiness";
+import EnglishForPsychologyPage from "./detailspages/ygn";
+import BrandingManagementPage from "./detailspages/branding";
+import GraphicDesignFundamentalsPage from "./detailspages/graphic";
+import DuolingoPrepPage from "./detailspages/duolingo";
+import SellingTechniquePage from "./detailspages/selling";
+import CookingBurmaPage from "./detailspages/burma";
+import CookingBusyPeoplePage from "./detailspages/busy";
+import CookingBurmeseHousewifePage from "./detailspages/housewife";
+import UltimateDailyMakeupPage from "./detailspages/dailymakeup";
+import NailArtStylingPage from "./detailspages/nailart";
+import BasicComputerCoursePage from "./detailspages/basic-computer";
+import HumanPsychologyPage from "./detailspages/human";
+import MachineLearning from "./detailspages/machinelearning";
 
 export default function CourseDetailPage() {
   const { id } = useParams<{ id: string }>();
@@ -23,10 +40,14 @@ export default function CourseDetailPage() {
       return <GedCoursePage />;
     case 3:
       return <MernStack />;
+    case 4:
+      return <EnglishForPsychologyPage />;
     case 5:
       return <FoundationComputerScience />;
     case 6:
       return <MathematicsComputerScience />;
+    case 7:
+      return <BrandingManagementPage />;
     case 8:
       return <Djmarket />;
     case 9:
@@ -37,6 +58,36 @@ export default function CourseDetailPage() {
       return <Adobe />;
     case 12:
       return <UiUx />;
+    case 13:
+      return <GraphicDesignFundamentalsPage />;
+    case 14:
+      return <MobileApp />;
+    case 15:
+      return <DataScience />;
+    case 17:
+      return <DuolingoPrepPage />;
+    case 18:
+      return <SellingTechniquePage />;
+    case 19:
+      return <CookingBurmaPage />;
+    case 20:
+      return <CookingBusyPeoplePage />;
+    case 21:
+      return <CookingBurmeseHousewifePage />;
+    case 22:
+      return <AiIntro />;
+    case 23:
+      return <AiForBusiness />;
+    case 24:
+      return <MachineLearning />;
+    case 25:
+      return <UltimateDailyMakeupPage />;
+    case 26:
+      return <NailArtStylingPage />;
+    case 27:
+      return <BasicComputerCoursePage />;
+    case 28:
+      return <HumanPsychologyPage />;
     case 29:
       return <MicrosoftFundamentalsPage />;
 

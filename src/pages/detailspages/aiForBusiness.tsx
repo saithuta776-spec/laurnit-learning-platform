@@ -1,63 +1,64 @@
+import AbImg from "@/assets/forDetail/aibusiness.jpg"; // Adjust import path if needed
 import { useState } from "react";
 import { Link } from "react-router";
-import startup from "@/assets/forDetail/startup.jpg";
 
-const startupEntrepreneurship = {
-  title: "Startup Entrepreneurship",
+const aiBusinessData = {
+  title: "AI Integration for Business",
   description:
-    "Transform innovative ideas into scalable business models. Learn lean startup methodologies, market validation, fundraising fundamentals, and operational execution to build and launch a successful enterprise.",
-  category: "Business",
-  instructor: "Tr Cho Cho Kha",
-  instructorRole: "Venture Strategist · Startup Mentor",
+    "Transform business operations and productivity using state-of-the-art Artificial Intelligence solutions. Learn to automate workflows, optimize customer experience, integrate enterprise AI tools, and leverage data-driven strategies for competitive advantage.",
+  category: "AI & Business",
+  instructor: "Stam Organization",
+  instructorLink: "/instructors/stam",
+  instructorRole: "Enterprise AI & Business Transformation Partner",
   instructorBio:
-    "Tr Cho Cho Kha brings extensive experience mentoring early-stage founders and guiding venture development. She specializes in business model innovation, lean execution, and investor pitch preparation.",
-  price: "600,000 Ks",
-  originalPrice: "800,000 Ks",
-  discount: "25% off",
-  image: startup,
+    "Stam Organization delivers top-tier technical curriculum and digital transformation training. Their instructors specialize in equipping leaders, teams, and enterprises with practical AI integration methodologies.",
+  price: "560,000 Ks",
+  originalPrice: "700,000 Ks",
+  discount: "20% off",
+  image: AbImg,
   includes: [
-    "3.5 months complete program",
-    "60+ hours on-demand video",
-    "20 startup toolkits & financial models",
-    "Pitch deck templates & investor guidelines",
+    "35+ hours on-demand video",
+    "28 downloadable frameworks & templates",
+    "12 practical business case studies",
     "Full lifetime access",
+    "Access on mobile and desktop",
     "Certificate of completion",
   ],
   series: [
     {
-      id: 601,
-      number: "Course 1",
-      title: "Ideation, Problem-Market Fit & Validation",
+      id: 501,
+      number: "Module 1",
+      title: "Strategic Fundamentals of Business AI",
       lessons: [
-        "Identifying Market Opportunities & Unmet Needs (15:30)",
-        "The Lean Startup Framework & Customer Discovery (22:15)",
-        "Building & Testing Minimum Viable Products (MVP) (26:40)",
+        "Identifying AI Growth Opportunities & Use Cases in Business (15:20)",
+        "Evaluating ROI & Business Impact of AI Solutions (18:40)",
+        "AI Ecosystem & Choosing the Right Tools for Your Operations (16:15)",
       ],
     },
     {
-      id: 602,
-      number: "Course 2",
-      title: "Business Model Canvas & Go-To-Market Execution",
+      id: 502,
+      number: "Module 2",
+      title: "Workflow Automation & Enterprise Copilots",
       lessons: [
-        "Designing the Business Model Canvas (BMC) (24:10)",
-        "Revenue Streams, Cost Structures & Unit Economics (28:05)",
-        "Customer Acquisition Channels & Launch Strategy (20:45)",
+        "Automating Daily Operations with AI Agents & Workflows (21:10)",
+        "Leveraging Custom GPTs & Enterprise Search Assistants (24:30)",
+        "AI for Customer Support, Marketing & Content Operations (19:50)",
       ],
     },
     {
-      id: 603,
-      number: "Course 3",
-      title: "Startup Finance, Fundraising & Pitching",
+      id: 503,
+      number: "Module 3",
+      title: "Implementation, Security & Governance",
       lessons: [
-        "Financial Forecasting & Cash Flow Management (25:50)",
-        "Types of Funding: Bootstrap, Seed & Venture Capital (21:30)",
-        "Crafting a Winning Investor Pitch Deck & Capstone Pitch (35:00)",
+        "Integrating AI APIs into Business Platforms & CRMs (22:15)",
+        "Data Privacy, Compliance & Risk Management in AI (17:40)",
+        "Building an AI-First Company Culture & Transition Strategy (20:00)",
       ],
     },
   ],
 };
 
-export default function Startup() {
+export default function AiForBusiness() {
   // Accordion State: Stores IDs of opened sub-courses
   const [expandedSeriesIds, setExpandedSeriesIds] = useState<number[]>([101]);
 
@@ -72,7 +73,7 @@ export default function Startup() {
   };
 
   // Get current active specialization configuration data
-  const data = startupEntrepreneurship;
+  const data = aiBusinessData;
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Breadcrumb Navigation */}
@@ -209,15 +210,15 @@ export default function Startup() {
             <h3 className="text-xl font-black">Your instructor</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-300 text-xl font-black text-white shadow-sm">
-                {data.instructor.charAt(3)}
+                {data.instructor.charAt(6)}
               </div>
               <div className="flex-1 space-y-2">
                 <div className="">
                   <Link
-                    to="/instructors/choChoKha"
+                    to="/instructors/stam"
                     className="text-base font-bold text-gray-900"
                   >
-                    {startupEntrepreneurship.instructor}
+                    {aiBusinessData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
                     {data.instructorRole}

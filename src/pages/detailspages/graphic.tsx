@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import MsImg from "@/assets/forDetail/microsoft_fundamentals.jpg"; // Adjust import path if needed
+import GfImg from "@/assets/forDetail/graphic.jpg"; // Adjust import path if needed
 
-const microsoftFundamentalsData = {
-  id: 29,
-  title: "Microsoft Fundamentals",
-  category: "Information Technology",
-  instructor: "MMC College",
-  instructorRole: "IT Faculty & Modern Workplace Training Department",
+const graphicDesignData = {
+  id: 13,
+  title: "Graphic Design Fundamentals",
+  category: "Design",
+  instructor: "Sayar Chan Aye",
+  instructorRole: "Lead Digital Marketing & Design Specialist",
   instructorBio:
-    "MMC College offers industry-focused technology programs designed to equip students with practical skills in office automation, cloud productivity tools, and essential software application suites.",
-  duration: "1 month",
+    "Sayar Chan Aye is a versatile marketing strategist and visual design instructor. He combines modern digital growth strategies with practical design skills to help students master branding, content creation, and visual storytelling.",
+  duration: "1.5 months",
   level: "Beginner",
-  price: 240000,
-  originalPrice: 300000,
-  image: MsImg,
+  price: 200000,
+  originalPrice: 400000,
+  image: GfImg,
   includes: [
-    "20+ hours on-demand video & practical hands-on labs",
-    "Downloadable exercise workbooks & office templates",
-    "Practical productivity projects & real-world tasks",
+    "28+ hours on-demand video",
+    "35 downloadable design assets & templates",
+    "10 practical hands-on design projects",
     "Full lifetime access",
     "Access on mobile and desktop",
-    "Certificate of completion from MMC College",
+    "Certificate of completion",
   ],
   curriculum: [
     {
       id: "module-1",
-      title: "Microsoft Office & Workplace Productivity Masterclass",
+      title: "Graphic Design Fundamentals Masterclass",
       lessons: [
-        "Microsoft Word: Document Formatting, Styles & Professional Layouts",
-        "Microsoft Excel: Essential Formulas, Functions & Data Management",
-        "Microsoft PowerPoint: Presentation Design, Visuals & Slide Transitions",
-        "Microsoft Outlook & Teams: Email Management, Calendar & Collaboration Tools",
-        "OneDrive & Cloud Tools: File Sharing, Backup & Collaborative Editing",
+        "Core Design Principles: Balance, Contrast, Hierarchy & Alignment",
+        "Color Theory & Masterclass in Typography Selection",
+        "Working with Vector Tools, Raster Graphics & Layouts",
+        "Creating Marketing Visuals & Social Media Assets",
+        "Exporting Production-Ready Designs for Print & Web",
       ],
     },
   ],
 };
 
-export default function MicrosoftFundamentalsPage() {
+export default function GraphicDesignFundamentalsPage() {
   // Accordion State: controls expanding lesson dropdowns independently
   const [expandedModules, setExpandedModules] = useState<string[]>([
     "module-1",
@@ -59,9 +59,7 @@ export default function MicrosoftFundamentalsPage() {
           Courses
         </Link>
         <span>/</span>
-        <span className="text-gray-600">
-          {microsoftFundamentalsData.category}
-        </span>
+        <span className="text-gray-600">{graphicDesignData.category}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -71,31 +69,31 @@ export default function MicrosoftFundamentalsPage() {
           <div className="space-y-3">
             <div className="flex gap-2">
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-emerald-800 uppercase">
-                {microsoftFundamentalsData.category}
+                {graphicDesignData.category}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Level: {microsoftFundamentalsData.level}
+                Level: {graphicDesignData.level}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Duration: {microsoftFundamentalsData.duration}
+                Duration: {graphicDesignData.duration}
               </span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              {microsoftFundamentalsData.title}
+              {graphicDesignData.title}
             </h1>
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Master essential Microsoft Office 365 applications for school,
-              university, or career advancement. Gain practical expertise in
-              Word, Excel, PowerPoint, Outlook, and cloud collaboration tools to
-              boost daily productivity.
+              Learn the essential building blocks of visual design. From
+              typography and color theory to composition and digital layout,
+              develop hands-on skills to create stunning graphics for branding,
+              social media, and digital publishing.
             </p>
           </div>
 
           {/* Banner Image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
-              src={microsoftFundamentalsData.image}
-              alt={microsoftFundamentalsData.title}
+              src={graphicDesignData.image}
+              alt={graphicDesignData.title}
               className="h-full w-full object-cover"
             />
           </div>
@@ -107,17 +105,16 @@ export default function MicrosoftFundamentalsPage() {
             </h3>
             <div className="grid grid-cols-1 gap-3 text-xs font-medium text-gray-700 sm:text-sm lg:grid-cols-2">
               <p className="flex items-start gap-2">
-                <span>✅</span> MS Word Document Formatting & Layout Design
+                <span>✅</span> Core Visual Design Principles & Layout Rules
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Essential MS Excel Formulas & Data Handling
+                <span>✅</span> Color Harmony, Palettes & Typography Pairings
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Engaging Visual Presentation Creation in
-                PowerPoint
+                <span>✅</span> Designing Marketing Banners & Social Assets
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Cloud File Storage & Team Collaboration Tools
+                <span>✅</span> Hands-On Portfolio Project Construction
               </p>
             </div>
           </div>
@@ -134,7 +131,7 @@ export default function MicrosoftFundamentalsPage() {
             </div>
 
             <div className="space-y-3">
-              {microsoftFundamentalsData.curriculum.map((module) => {
+              {graphicDesignData.curriculum.map((module) => {
                 const isOpen = expandedModules.includes(module.id);
 
                 return (
@@ -190,22 +187,22 @@ export default function MicrosoftFundamentalsPage() {
             <h3 className="text-xl font-black">Provided by</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-black text-white shadow-sm">
-                MC
+                CA
               </div>
               <div className="flex-1 space-y-2">
                 <div>
                   <Link
-                    to="/instructors/mmc"
+                    to="/instructors/chanAye"
                     className="text-base font-bold text-gray-900"
                   >
-                    {microsoftFundamentalsData.instructor}
+                    {graphicDesignData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
-                    {microsoftFundamentalsData.instructorRole}
+                    {graphicDesignData.instructorRole}
                   </p>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
-                  {microsoftFundamentalsData.instructorBio}
+                  {graphicDesignData.instructorBio}
                 </p>
               </div>
             </div>
@@ -219,14 +216,14 @@ export default function MicrosoftFundamentalsPage() {
             <div className="space-y-1">
               <div className="flex items-center gap-3">
                 <span className="text-3xl font-black tracking-tight text-gray-950">
-                  {microsoftFundamentalsData.price.toLocaleString()} Ks
+                  {graphicDesignData.price.toLocaleString()} Ks
                 </span>
                 <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-800">
                   20% OFF
                 </span>
               </div>
               <p className="text-xs font-bold text-gray-400 line-through">
-                {microsoftFundamentalsData.originalPrice.toLocaleString()} Ks
+                {graphicDesignData.originalPrice.toLocaleString()} Ks
               </p>
               <p className="text-[11px] text-gray-400">
                 Lifetime access · Instant enrollment
@@ -235,7 +232,7 @@ export default function MicrosoftFundamentalsPage() {
 
             {/* Enroll Button */}
             <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
-              Enroll Now ({microsoftFundamentalsData.price.toLocaleString()} Ks)
+              Enroll Now ({graphicDesignData.price.toLocaleString()} Ks)
             </button>
 
             <div className="my-4 border-t border-gray-100" />
@@ -246,7 +243,7 @@ export default function MicrosoftFundamentalsPage() {
                 This course includes:
               </h4>
               <ul className="space-y-2.5 text-xs font-semibold text-gray-600">
-                {microsoftFundamentalsData.includes.map((feature, idx) => (
+                {graphicDesignData.includes.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2.5">
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>

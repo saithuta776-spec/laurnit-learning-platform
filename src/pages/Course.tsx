@@ -27,7 +27,7 @@ import AbImg from "@/assets/aibusiness.jpg";
 import MlImg from "@/assets/machine.jpg";
 import MuImg from "@/assets/makeup.jpg";
 import NaImg from "@/assets/nailart.jpg";
-import KcImg from "@/assets/kmbasic.png";
+import KcImg from "@/assets/Kmbasic.jpg";
 import HsImg from "@/assets/human.jpg";
 import MsImg from "@/assets/microsoft.jpg";
 

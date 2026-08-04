@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import MsImg from "@/assets/forDetail/microsoft_fundamentals.jpg"; // Adjust import path if needed
+import HsImg from "@/assets/forDetail/human_psychology.jpg"; // Adjust import path if needed
 
-const microsoftFundamentalsData = {
-  id: 29,
-  title: "Microsoft Fundamentals",
-  category: "Information Technology",
-  instructor: "MMC College",
-  instructorRole: "IT Faculty & Modern Workplace Training Department",
+const psychologyData = {
+  id: 28,
+  title: "Human Psychology",
+  category: "Short-Course",
+  instructor: "Dr Kaung Zaw",
+  instructorRole: "Lecturer in Psychology & Behavioral Science Practitioner",
   instructorBio:
-    "MMC College offers industry-focused technology programs designed to equip students with practical skills in office automation, cloud productivity tools, and essential software application suites.",
+    "Dr Kaung Zaw is an experienced psychology educator and practitioner dedicated to making behavioral science accessible to everyone. He specializes in cognitive patterns, emotional intelligence, personal resilience, and human interaction dynamics.",
   duration: "1 month",
   level: "Beginner",
   price: 240000,
   originalPrice: 300000,
-  image: MsImg,
+  image: HsImg,
   includes: [
-    "20+ hours on-demand video & practical hands-on labs",
-    "Downloadable exercise workbooks & office templates",
-    "Practical productivity projects & real-world tasks",
+    "20+ hours on-demand video lessons",
+    "Self-reflection worksheets & psychological self-assessment tools",
+    "Case study analysis & practical behavioral guides",
     "Full lifetime access",
     "Access on mobile and desktop",
-    "Certificate of completion from MMC College",
+    "Certificate of completion",
   ],
   curriculum: [
     {
       id: "module-1",
-      title: "Microsoft Office & Workplace Productivity Masterclass",
+      title: "Foundations of Human Behavior & Mindset",
       lessons: [
-        "Microsoft Word: Document Formatting, Styles & Professional Layouts",
-        "Microsoft Excel: Essential Formulas, Functions & Data Management",
-        "Microsoft PowerPoint: Presentation Design, Visuals & Slide Transitions",
-        "Microsoft Outlook & Teams: Email Management, Calendar & Collaboration Tools",
-        "OneDrive & Cloud Tools: File Sharing, Backup & Collaborative Editing",
+        "Introduction to Psychological Foundations & Cognitive Biases",
+        "Understanding Emotions, Stress Reactions & Self-Regulation",
+        "Interpersonal Dynamics: Communication, Perception & Empathy",
+        "Motivation, Habit Formation & Behavioral Change Psychology",
+        "Mental Well-being, Mindset Building & Applied Resilience",
       ],
     },
   ],
 };
 
-export default function MicrosoftFundamentalsPage() {
+export default function HumanPsychologyPage() {
   // Accordion State: controls expanding lesson dropdowns independently
   const [expandedModules, setExpandedModules] = useState<string[]>([
     "module-1",
@@ -59,9 +59,7 @@ export default function MicrosoftFundamentalsPage() {
           Courses
         </Link>
         <span>/</span>
-        <span className="text-gray-600">
-          {microsoftFundamentalsData.category}
-        </span>
+        <span className="text-gray-600">{psychologyData.category}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -71,31 +69,31 @@ export default function MicrosoftFundamentalsPage() {
           <div className="space-y-3">
             <div className="flex gap-2">
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-emerald-800 uppercase">
-                {microsoftFundamentalsData.category}
+                {psychologyData.category}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Level: {microsoftFundamentalsData.level}
+                Level: {psychologyData.level}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Duration: {microsoftFundamentalsData.duration}
+                Duration: {psychologyData.duration}
               </span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              {microsoftFundamentalsData.title}
+              {psychologyData.title}
             </h1>
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Master essential Microsoft Office 365 applications for school,
-              university, or career advancement. Gain practical expertise in
-              Word, Excel, PowerPoint, Outlook, and cloud collaboration tools to
-              boost daily productivity.
+              Explore the core principles of human behavior, cognitive
+              processes, and emotional intelligence. Gain valuable insights into
+              how people think, communicate, and form habits to improve your
+              personal and professional relationships.
             </p>
           </div>
 
           {/* Banner Image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
-              src={microsoftFundamentalsData.image}
-              alt={microsoftFundamentalsData.title}
+              src={psychologyData.image}
+              alt={psychologyData.title}
               className="h-full w-full object-cover"
             />
           </div>
@@ -107,17 +105,20 @@ export default function MicrosoftFundamentalsPage() {
             </h3>
             <div className="grid grid-cols-1 gap-3 text-xs font-medium text-gray-700 sm:text-sm lg:grid-cols-2">
               <p className="flex items-start gap-2">
-                <span>✅</span> MS Word Document Formatting & Layout Design
+                <span>✅</span> Key Principles of Cognitive & Behavioral
+                Psychology
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Essential MS Excel Formulas & Data Handling
+                <span>✅</span> Emotional Intelligence & Stress Management
+                Skills
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Engaging Visual Presentation Creation in
-                PowerPoint
+                <span>✅</span> Interpersonal Communication & Empathy
+                Development
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Cloud File Storage & Team Collaboration Tools
+                <span>✅</span> Psychological Hacks for Habit Building &
+                Resilience
               </p>
             </div>
           </div>
@@ -134,7 +135,7 @@ export default function MicrosoftFundamentalsPage() {
             </div>
 
             <div className="space-y-3">
-              {microsoftFundamentalsData.curriculum.map((module) => {
+              {psychologyData.curriculum.map((module) => {
                 const isOpen = expandedModules.includes(module.id);
 
                 return (
@@ -190,22 +191,22 @@ export default function MicrosoftFundamentalsPage() {
             <h3 className="text-xl font-black">Provided by</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-black text-white shadow-sm">
-                MC
+                KZ
               </div>
               <div className="flex-1 space-y-2">
                 <div>
                   <Link
-                    to="/instructors/mmc"
+                    to="/instructors/kaungZaw"
                     className="text-base font-bold text-gray-900"
                   >
-                    {microsoftFundamentalsData.instructor}
+                    {psychologyData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
-                    {microsoftFundamentalsData.instructorRole}
+                    {psychologyData.instructorRole}
                   </p>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
-                  {microsoftFundamentalsData.instructorBio}
+                  {psychologyData.instructorBio}
                 </p>
               </div>
             </div>
@@ -219,14 +220,14 @@ export default function MicrosoftFundamentalsPage() {
             <div className="space-y-1">
               <div className="flex items-center gap-3">
                 <span className="text-3xl font-black tracking-tight text-gray-950">
-                  {microsoftFundamentalsData.price.toLocaleString()} Ks
+                  {psychologyData.price.toLocaleString()} Ks
                 </span>
                 <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-800">
                   20% OFF
                 </span>
               </div>
               <p className="text-xs font-bold text-gray-400 line-through">
-                {microsoftFundamentalsData.originalPrice.toLocaleString()} Ks
+                {psychologyData.originalPrice.toLocaleString()} Ks
               </p>
               <p className="text-[11px] text-gray-400">
                 Lifetime access · Instant enrollment
@@ -235,7 +236,7 @@ export default function MicrosoftFundamentalsPage() {
 
             {/* Enroll Button */}
             <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
-              Enroll Now ({microsoftFundamentalsData.price.toLocaleString()} Ks)
+              Enroll Now ({psychologyData.price.toLocaleString()} Ks)
             </button>
 
             <div className="my-4 border-t border-gray-100" />
@@ -246,7 +247,7 @@ export default function MicrosoftFundamentalsPage() {
                 This course includes:
               </h4>
               <ul className="space-y-2.5 text-xs font-semibold text-gray-600">
-                {microsoftFundamentalsData.includes.map((feature, idx) => (
+                {psychologyData.includes.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2.5">
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>

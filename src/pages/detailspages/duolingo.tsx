@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import MsImg from "@/assets/forDetail/microsoft_fundamentals.jpg"; // Adjust import path if needed
+import DuImg from "@/assets/forDetail/duolingo.jpg"; // Adjust import path if needed
 
-const microsoftFundamentalsData = {
-  id: 29,
-  title: "Microsoft Fundamentals",
-  category: "Information Technology",
-  instructor: "MMC College",
-  instructorRole: "IT Faculty & Modern Workplace Training Department",
+const duolingoPrepData = {
+  id: 17,
+  title: "Duolingo Exam Preparation",
+  category: "Academic",
+  instructor: "Tr Marry Aung",
+  instructorRole: "Senior Language Assessment & Exam Prep Instructor",
   instructorBio:
-    "MMC College offers industry-focused technology programs designed to equip students with practical skills in office automation, cloud productivity tools, and essential software application suites.",
-  duration: "1 month",
-  level: "Beginner",
-  price: 240000,
-  originalPrice: 300000,
-  image: MsImg,
+    "Tr Marry Aung is a seasoned language assessment consultant specializing in English proficiency testing. She guides students through tailored strategies, adaptive scoring algorithms, real-time speaking/writing prompts, and effective time-management techniques for modern computer-adaptive exams.",
+  duration: "1.5 months",
+  level: "Exam Ready",
+  price: 300000,
+  originalPrice: 500000,
+  image: DuImg,
   includes: [
-    "20+ hours on-demand video & practical hands-on labs",
-    "Downloadable exercise workbooks & office templates",
-    "Practical productivity projects & real-world tasks",
+    "30+ hours on-demand video tutorials",
+    "Real Duolingo English Test (DET) question drills",
+    "Interactive production & adaptive practice sets",
     "Full lifetime access",
     "Access on mobile and desktop",
-    "Certificate of completion from MMC College",
+    "Certificate of completion",
   ],
   curriculum: [
     {
       id: "module-1",
-      title: "Microsoft Office & Workplace Productivity Masterclass",
+      title: "Duolingo English Test Prep Masterclass",
       lessons: [
-        "Microsoft Word: Document Formatting, Styles & Professional Layouts",
-        "Microsoft Excel: Essential Formulas, Functions & Data Management",
-        "Microsoft PowerPoint: Presentation Design, Visuals & Slide Transitions",
-        "Microsoft Outlook & Teams: Email Management, Calendar & Collaboration Tools",
-        "OneDrive & Cloud Tools: File Sharing, Backup & Collaborative Editing",
+        "DET Exam Structure, Computer-Adaptive Scoring & Technical Setup",
+        "Literacy & Comprehension: Read and Select, Fill in the Blanks",
+        "Conversation & Listening: Listen and Select, Dictation Drills",
+        "Production Skills: Interactive Writing & Picture Description Tasks",
+        "Speaking Module: Read Aloud, Interactive Speaking & Video Interview",
       ],
     },
   ],
 };
 
-export default function MicrosoftFundamentalsPage() {
+export default function DuolingoPrepPage() {
   // Accordion State: controls expanding lesson dropdowns independently
   const [expandedModules, setExpandedModules] = useState<string[]>([
     "module-1",
@@ -59,9 +59,7 @@ export default function MicrosoftFundamentalsPage() {
           Courses
         </Link>
         <span>/</span>
-        <span className="text-gray-600">
-          {microsoftFundamentalsData.category}
-        </span>
+        <span className="text-gray-600">{duolingoPrepData.category}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -71,31 +69,31 @@ export default function MicrosoftFundamentalsPage() {
           <div className="space-y-3">
             <div className="flex gap-2">
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-emerald-800 uppercase">
-                {microsoftFundamentalsData.category}
+                {duolingoPrepData.category}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Level: {microsoftFundamentalsData.level}
+                Level: {duolingoPrepData.level}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Duration: {microsoftFundamentalsData.duration}
+                Duration: {duolingoPrepData.duration}
               </span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              {microsoftFundamentalsData.title}
+              {duolingoPrepData.title}
             </h1>
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Master essential Microsoft Office 365 applications for school,
-              university, or career advancement. Gain practical expertise in
-              Word, Excel, PowerPoint, Outlook, and cloud collaboration tools to
-              boost daily productivity.
+              Master the Duolingo English Test (DET) with target score
+              strategies. Learn how to respond effectively under strict time
+              constraints, refine spoken fluency, build advanced vocabulary, and
+              ace adaptive question types.
             </p>
           </div>
 
           {/* Banner Image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
-              src={microsoftFundamentalsData.image}
-              alt={microsoftFundamentalsData.title}
+              src={duolingoPrepData.image}
+              alt={duolingoPrepData.title}
               className="h-full w-full object-cover"
             />
           </div>
@@ -107,17 +105,17 @@ export default function MicrosoftFundamentalsPage() {
             </h3>
             <div className="grid grid-cols-1 gap-3 text-xs font-medium text-gray-700 sm:text-sm lg:grid-cols-2">
               <p className="flex items-start gap-2">
-                <span>✅</span> MS Word Document Formatting & Layout Design
+                <span>✅</span> DET Question Type Strategies & Scoring Rubrics
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Essential MS Excel Formulas & Data Handling
+                <span>✅</span> Advanced Vocabulary & High-Scoring Writing
+                Templates
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Engaging Visual Presentation Creation in
-                PowerPoint
+                <span>✅</span> Spoken Fluency & Interactive Speaking Confidence
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Cloud File Storage & Team Collaboration Tools
+                <span>✅</span> Time-Management & Adaptive Speed Drills
               </p>
             </div>
           </div>
@@ -134,7 +132,7 @@ export default function MicrosoftFundamentalsPage() {
             </div>
 
             <div className="space-y-3">
-              {microsoftFundamentalsData.curriculum.map((module) => {
+              {duolingoPrepData.curriculum.map((module) => {
                 const isOpen = expandedModules.includes(module.id);
 
                 return (
@@ -190,22 +188,22 @@ export default function MicrosoftFundamentalsPage() {
             <h3 className="text-xl font-black">Provided by</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-black text-white shadow-sm">
-                MC
+                MA
               </div>
               <div className="flex-1 space-y-2">
                 <div>
                   <Link
-                    to="/instructors/mmc"
+                    to="/instructors/marryAung"
                     className="text-base font-bold text-gray-900"
                   >
-                    {microsoftFundamentalsData.instructor}
+                    {duolingoPrepData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
-                    {microsoftFundamentalsData.instructorRole}
+                    {duolingoPrepData.instructorRole}
                   </p>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
-                  {microsoftFundamentalsData.instructorBio}
+                  {duolingoPrepData.instructorBio}
                 </p>
               </div>
             </div>
@@ -219,14 +217,14 @@ export default function MicrosoftFundamentalsPage() {
             <div className="space-y-1">
               <div className="flex items-center gap-3">
                 <span className="text-3xl font-black tracking-tight text-gray-950">
-                  {microsoftFundamentalsData.price.toLocaleString()} Ks
+                  {duolingoPrepData.price.toLocaleString()} Ks
                 </span>
                 <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-800">
                   20% OFF
                 </span>
               </div>
               <p className="text-xs font-bold text-gray-400 line-through">
-                {microsoftFundamentalsData.originalPrice.toLocaleString()} Ks
+                {duolingoPrepData.originalPrice.toLocaleString()} Ks
               </p>
               <p className="text-[11px] text-gray-400">
                 Lifetime access · Instant enrollment
@@ -235,7 +233,7 @@ export default function MicrosoftFundamentalsPage() {
 
             {/* Enroll Button */}
             <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
-              Enroll Now ({microsoftFundamentalsData.price.toLocaleString()} Ks)
+              Enroll Now ({duolingoPrepData.price.toLocaleString()} Ks)
             </button>
 
             <div className="my-4 border-t border-gray-100" />
@@ -246,7 +244,7 @@ export default function MicrosoftFundamentalsPage() {
                 This course includes:
               </h4>
               <ul className="space-y-2.5 text-xs font-semibold text-gray-600">
-                {microsoftFundamentalsData.includes.map((feature, idx) => (
+                {duolingoPrepData.includes.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2.5">
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>

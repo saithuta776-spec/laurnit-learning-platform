@@ -3,6 +3,7 @@ import { Link } from "react-router";
 import PyImg from "@/assets/forDetail/data-analysis.jpg";
 
 const dataAnalysis = {
+  id: "data-analysis",
   title: "Data Analysis with Python Professional Certificate",
   description:
     "Launch your career in data science. Master Python, SQL, data cleaning, and predictive modeling with hands-on projects. No prior experience required.",
@@ -78,7 +79,6 @@ const dataAnalysis = {
 };
 
 export default function DataAnalysis() {
-  // Accordion State: Stores IDs of opened sub-courses
   const [expandedSeriesIds, setExpandedSeriesIds] = useState<number[]>([101]);
 
   const toggleAccordion = (seriesId: number) => {
@@ -91,8 +91,8 @@ export default function DataAnalysis() {
     }
   };
 
-  // Get current active specialization configuration data
   const data = dataAnalysis;
+
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Breadcrumb Navigation */}
@@ -125,7 +125,7 @@ export default function DataAnalysis() {
             </p>
           </div>
 
-          {/* Large Aspect Aspect Banner image */}
+          {/* Large Aspect Banner image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
               src={data.image}
@@ -134,7 +134,7 @@ export default function DataAnalysis() {
             />
           </div>
 
-          {/* Coursera Core Objective Highlights */}
+          {/* Core Objective Highlights */}
           <div className="space-y-4 rounded-[2rem] border border-gray-100 bg-white p-6 shadow-sm">
             <h3 className="text-lg font-black text-gray-950">
               What you will learn inside this bundle
@@ -168,7 +168,7 @@ export default function DataAnalysis() {
             </div>
 
             <div className="space-y-3">
-              {data.series.map((module: any) => {
+              {data.series.map((module) => {
                 const isOpen = expandedSeriesIds.includes(module.id);
                 return (
                   <div
@@ -177,6 +177,7 @@ export default function DataAnalysis() {
                   >
                     {/* Header Trigger row */}
                     <button
+                      type="button"
                       onClick={() => toggleAccordion(module.id)}
                       className="flex w-full items-center justify-between p-5 text-left transition-colors hover:bg-slate-50/60"
                     >
@@ -193,13 +194,15 @@ export default function DataAnalysis() {
                         </p>
                       </div>
                       <span
-                        className={`text-xs text-gray-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                        className={`text-xs text-gray-400 transition-transform duration-200 ${
+                          isOpen ? "rotate-180" : ""
+                        }`}
                       >
                         ▼
                       </span>
                     </button>
 
-                    {/* Animated Open Lesson Sublist */}
+                    {/* Open Lesson Sublist */}
                     {isOpen && (
                       <div className="divide-y divide-gray-100/70 border-t border-gray-50 bg-slate-50/40 px-5 py-2 text-xs sm:text-sm">
                         {module.lessons.map((lesson: string, idx: number) => (
@@ -232,12 +235,12 @@ export default function DataAnalysis() {
                 {data.instructor.charAt(6)}
               </div>
               <div className="flex-1 space-y-2">
-                <div className="">
+                <div>
                   <Link
-                    to="/instructors/htetwai"
-                    className="text-base font-bold text-gray-900"
+                    to="/instructors/htetWai"
+                    className="text-base font-bold text-gray-900 hover:text-emerald-600"
                   >
-                    {dataAnalysis.instructor}
+                    {data.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
                     {data.instructorRole}
@@ -251,9 +254,9 @@ export default function DataAnalysis() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: STICKY FLOATING CHECKOUT CARD (1/3 Width) */}
+        {/* RIGHT COLUMN: STICKY FLOATING CHECKOUT CARD */}
         <div className="lg:col-span-1">
-          <div className="sticky top-5 space-y-6 rounded-[2rem] border border-gray-100 p-6 shadow-xl">
+          <div className="sticky top-5 space-y-6 rounded-[2rem] border border-gray-100 bg-white p-6 shadow-xl">
             {/* Currency Pricing Values */}
             <div className="space-y-1">
               <div className="flex items-center gap-3">
@@ -274,12 +277,19 @@ export default function DataAnalysis() {
 
             {/* CTA Option Triggers */}
             <div className="space-y-2.5">
-              <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
+              <button
+                type="button"
+                className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm"
+              >
                 Buy Full Specialization Bundle
               </button>
-              <button className="w-full rounded-2xl border border-gray-950 bg-gray-950 py-3.5 text-xs font-black text-white transition-colors hover:bg-gray-800 sm:text-sm">
+
+              <Link
+                to="/courses/data-analysis/single"
+                className="block w-full rounded-2xl border border-gray-950 bg-gray-950 py-3.5 text-center text-xs font-black text-white transition-colors hover:bg-gray-800 sm:text-sm"
+              >
                 Single Course Option
-              </button>
+              </Link>
             </div>
 
             <div className="my-4 border-t border-gray-100" />
@@ -295,7 +305,6 @@ export default function DataAnalysis() {
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>
                   </li>
-                  // Fpr is the meaning of landing the new page while rendering the same page on the same site of vite.
                 ))}
               </ul>
             </div>

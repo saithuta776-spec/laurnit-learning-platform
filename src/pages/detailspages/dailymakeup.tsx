@@ -1,44 +1,44 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import MsImg from "@/assets/forDetail/microsoft_fundamentals.jpg"; // Adjust import path if needed
+import MuImg from "@/assets/forDetail/makeup.jpg"; // Adjust import path if needed
 
-const microsoftFundamentalsData = {
-  id: 29,
-  title: "Microsoft Fundamentals",
-  category: "Information Technology",
-  instructor: "MMC College",
-  instructorRole: "IT Faculty & Modern Workplace Training Department",
+const makeupData = {
+  id: 25,
+  title: "The Ultimate Daily Makeup",
+  category: "Beauty",
+  instructor: "Hanny Phyu (Hanny Vlog)",
+  instructorRole: "Beauty Content Creator & Professional Makeup Artist",
   instructorBio:
-    "MMC College offers industry-focused technology programs designed to equip students with practical skills in office automation, cloud productivity tools, and essential software application suites.",
+    "Hanny Phyu is a popular beauty content creator behind Hanny Vlog, known for her fresh, effortless, and accessible makeup tutorials. She specializes in skin-first makeup techniques, daily wearable looks, and product selection for everyday confidence.",
   duration: "1 month",
   level: "Beginner",
-  price: 240000,
+  price: 100000,
   originalPrice: 300000,
-  image: MsImg,
+  image: MuImg,
   includes: [
-    "20+ hours on-demand video & practical hands-on labs",
-    "Downloadable exercise workbooks & office templates",
-    "Practical productivity projects & real-world tasks",
+    "20+ hours on-demand video lessons",
+    "Essential everyday makeup product guide & shade matching chart",
+    "Step-by-step daily routine breakdowns & brush care guides",
     "Full lifetime access",
     "Access on mobile and desktop",
-    "Certificate of completion from MMC College",
+    "Certificate of completion",
   ],
   curriculum: [
     {
       id: "module-1",
-      title: "Microsoft Office & Workplace Productivity Masterclass",
+      title: "Everyday Makeup & Skin Prep Masterclass",
       lessons: [
-        "Microsoft Word: Document Formatting, Styles & Professional Layouts",
-        "Microsoft Excel: Essential Formulas, Functions & Data Management",
-        "Microsoft PowerPoint: Presentation Design, Visuals & Slide Transitions",
-        "Microsoft Outlook & Teams: Email Management, Calendar & Collaboration Tools",
-        "OneDrive & Cloud Tools: File Sharing, Backup & Collaborative Editing",
+        "Skin Preparation & Choosing the Right Foundation/Concealer for Your Skin Type",
+        "Natural Base Application: Seamless Blending & Dewy vs. Matte Finishes",
+        "Eye Makeup Essentials: Quick Everyday Eyeshadow, Eyeliner & Lash Techniques",
+        "Brows & Blush: Face Framing, Contour Hints & Youthful Color Placement",
+        "Long-Lasting Setting Techniques & 10-Minute Morning Routine",
       ],
     },
   ],
 };
 
-export default function MicrosoftFundamentalsPage() {
+export default function UltimateDailyMakeupPage() {
   // Accordion State: controls expanding lesson dropdowns independently
   const [expandedModules, setExpandedModules] = useState<string[]>([
     "module-1",
@@ -59,9 +59,7 @@ export default function MicrosoftFundamentalsPage() {
           Courses
         </Link>
         <span>/</span>
-        <span className="text-gray-600">
-          {microsoftFundamentalsData.category}
-        </span>
+        <span className="text-gray-600">{makeupData.category}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -71,32 +69,32 @@ export default function MicrosoftFundamentalsPage() {
           <div className="space-y-3">
             <div className="flex gap-2">
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-emerald-800 uppercase">
-                {microsoftFundamentalsData.category}
+                {makeupData.category}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Level: {microsoftFundamentalsData.level}
+                Level: {makeupData.level}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Duration: {microsoftFundamentalsData.duration}
+                Duration: {makeupData.duration}
               </span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              {microsoftFundamentalsData.title}
+              {makeupData.title}
             </h1>
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Master essential Microsoft Office 365 applications for school,
-              university, or career advancement. Gain practical expertise in
-              Word, Excel, PowerPoint, Outlook, and cloud collaboration tools to
-              boost daily productivity.
+              Master effortless, glowing, and natural everyday makeup looks.
+              Learn proper skin prep, shade matching, quick 10-minute routines,
+              and long-lasting techniques tailored for school, work, or casual
+              outings.
             </p>
           </div>
 
           {/* Banner Image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
-              src={microsoftFundamentalsData.image}
-              alt={microsoftFundamentalsData.title}
-              className="h-full w-full object-cover"
+              src={makeupData.image}
+              alt={makeupData.title}
+              className="h-100 w-full object-cover"
             />
           </div>
 
@@ -107,17 +105,17 @@ export default function MicrosoftFundamentalsPage() {
             </h3>
             <div className="grid grid-cols-1 gap-3 text-xs font-medium text-gray-700 sm:text-sm lg:grid-cols-2">
               <p className="flex items-start gap-2">
-                <span>✅</span> MS Word Document Formatting & Layout Design
+                <span>✅</span> Flawless & Natural Base Makeup Application
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Essential MS Excel Formulas & Data Handling
+                <span>✅</span> Shade Matching & Skin Type Preparation
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Engaging Visual Presentation Creation in
-                PowerPoint
+                <span>✅</span> Quick 10-Minute Morning Makeup Routines
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Cloud File Storage & Team Collaboration Tools
+                <span>✅</span> Long-Lasting Setting & All-Day Touch-Up
+                Techniques
               </p>
             </div>
           </div>
@@ -134,7 +132,7 @@ export default function MicrosoftFundamentalsPage() {
             </div>
 
             <div className="space-y-3">
-              {microsoftFundamentalsData.curriculum.map((module) => {
+              {makeupData.curriculum.map((module) => {
                 const isOpen = expandedModules.includes(module.id);
 
                 return (
@@ -190,22 +188,22 @@ export default function MicrosoftFundamentalsPage() {
             <h3 className="text-xl font-black">Provided by</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-black text-white shadow-sm">
-                MC
+                HP
               </div>
               <div className="flex-1 space-y-2">
                 <div>
                   <Link
-                    to="/instructors/mmc"
+                    to="/instructors/hannyPhyu"
                     className="text-base font-bold text-gray-900"
                   >
-                    {microsoftFundamentalsData.instructor}
+                    {makeupData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
-                    {microsoftFundamentalsData.instructorRole}
+                    {makeupData.instructorRole}
                   </p>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
-                  {microsoftFundamentalsData.instructorBio}
+                  {makeupData.instructorBio}
                 </p>
               </div>
             </div>
@@ -219,14 +217,14 @@ export default function MicrosoftFundamentalsPage() {
             <div className="space-y-1">
               <div className="flex items-center gap-3">
                 <span className="text-3xl font-black tracking-tight text-gray-950">
-                  {microsoftFundamentalsData.price.toLocaleString()} Ks
+                  {makeupData.price.toLocaleString()} Ks
                 </span>
                 <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-800">
                   20% OFF
                 </span>
               </div>
               <p className="text-xs font-bold text-gray-400 line-through">
-                {microsoftFundamentalsData.originalPrice.toLocaleString()} Ks
+                {makeupData.originalPrice.toLocaleString()} Ks
               </p>
               <p className="text-[11px] text-gray-400">
                 Lifetime access · Instant enrollment
@@ -235,7 +233,7 @@ export default function MicrosoftFundamentalsPage() {
 
             {/* Enroll Button */}
             <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
-              Enroll Now ({microsoftFundamentalsData.price.toLocaleString()} Ks)
+              Enroll Now ({makeupData.price.toLocaleString()} Ks)
             </button>
 
             <div className="my-4 border-t border-gray-100" />
@@ -246,7 +244,7 @@ export default function MicrosoftFundamentalsPage() {
                 This course includes:
               </h4>
               <ul className="space-y-2.5 text-xs font-semibold text-gray-600">
-                {microsoftFundamentalsData.includes.map((feature, idx) => (
+                {makeupData.includes.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2.5">
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>

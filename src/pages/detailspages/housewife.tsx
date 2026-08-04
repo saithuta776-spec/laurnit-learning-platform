@@ -1,44 +1,45 @@
 import { useState } from "react";
 import { Link } from "react-router";
-import MsImg from "@/assets/forDetail/microsoft_fundamentals.jpg"; // Adjust import path if needed
+import HcImg from "@/assets/forDetail/cooking_housewife.jpg"; // Adjust import path if needed
 
-const microsoftFundamentalsData = {
-  id: 29,
-  title: "Microsoft Fundamentals",
-  category: "Information Technology",
-  instructor: "MMC College",
-  instructorRole: "IT Faculty & Modern Workplace Training Department",
+const cookingHousewifeData = {
+  id: 21,
+  title: "Cooking Guide for Burmese Housewife",
+  category: "Cooking",
+  instructor: "Tr Wai",
+  instructorRole:
+    "Culinary Arts Instructor & Home Kitchen Management Specialist",
   instructorBio:
-    "MMC College offers industry-focused technology programs designed to equip students with practical skills in office automation, cloud productivity tools, and essential software application suites.",
+    "Tr Wai is a dedicated culinary instructor with expertise in traditional Burmese home cooking, balanced meal planning, and efficient kitchen management. She helps home cooks create nutritious, budget-friendly, and delicious daily meals for the entire family.",
   duration: "1 month",
   level: "Beginner",
-  price: 240000,
+  price: 100000,
   originalPrice: 300000,
-  image: MsImg,
+  image: HcImg,
   includes: [
-    "20+ hours on-demand video & practical hands-on labs",
-    "Downloadable exercise workbooks & office templates",
-    "Practical productivity projects & real-world tasks",
+    "20+ hours on-demand video cooking lessons",
+    "Comprehensive daily meal planning guides & recipe sets",
+    "Budget-friendly grocery management tips",
     "Full lifetime access",
     "Access on mobile and desktop",
-    "Certificate of completion from MMC College",
+    "Certificate of completion",
   ],
   curriculum: [
     {
       id: "module-1",
-      title: "Microsoft Office & Workplace Productivity Masterclass",
+      title: "Burmese Home Cooking & Kitchen Management Masterclass",
       lessons: [
-        "Microsoft Word: Document Formatting, Styles & Professional Layouts",
-        "Microsoft Excel: Essential Formulas, Functions & Data Management",
-        "Microsoft PowerPoint: Presentation Design, Visuals & Slide Transitions",
-        "Microsoft Outlook & Teams: Email Management, Calendar & Collaboration Tools",
-        "OneDrive & Cloud Tools: File Sharing, Backup & Collaborative Editing",
+        "Daily Meal Planning & Balancing Family Nutrition",
+        "Essential Burmese Homestyle Curries & Side Dishes",
+        "Soup Preparation, Stir-Fries & Seasonal Vegetable Cooking",
+        "Budget-Friendly Grocery Shopping & Ingredient Storage Hacks",
+        "Preparing Special Weekend & Festival Family Feasts",
       ],
     },
   ],
 };
 
-export default function MicrosoftFundamentalsPage() {
+export default function CookingBurmeseHousewifePage() {
   // Accordion State: controls expanding lesson dropdowns independently
   const [expandedModules, setExpandedModules] = useState<string[]>([
     "module-1",
@@ -59,9 +60,7 @@ export default function MicrosoftFundamentalsPage() {
           Courses
         </Link>
         <span>/</span>
-        <span className="text-gray-600">
-          {microsoftFundamentalsData.category}
-        </span>
+        <span className="text-gray-600">{cookingHousewifeData.category}</span>
       </div>
 
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
@@ -71,32 +70,32 @@ export default function MicrosoftFundamentalsPage() {
           <div className="space-y-3">
             <div className="flex gap-2">
               <span className="rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-black tracking-wider text-emerald-800 uppercase">
-                {microsoftFundamentalsData.category}
+                {cookingHousewifeData.category}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Level: {microsoftFundamentalsData.level}
+                Level: {cookingHousewifeData.level}
               </span>
               <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[10px] font-medium text-gray-800">
-                Duration: {microsoftFundamentalsData.duration}
+                Duration: {cookingHousewifeData.duration}
               </span>
             </div>
             <h1 className="text-3xl font-black tracking-tight text-gray-950 sm:text-4xl">
-              {microsoftFundamentalsData.title}
+              {cookingHousewifeData.title}
             </h1>
             <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-              Master essential Microsoft Office 365 applications for school,
-              university, or career advancement. Gain practical expertise in
-              Word, Excel, PowerPoint, Outlook, and cloud collaboration tools to
-              boost daily productivity.
+              Master the art of practical, delicious, and nutritious Burmese
+              home cooking. Learn how to craft well-balanced daily menus,
+              streamline kitchen management, and cook authentic family meals
+              with ease.
             </p>
           </div>
 
           {/* Banner Image */}
           <div className="overflow-hidden rounded-[2rem] shadow-md">
             <img
-              src={microsoftFundamentalsData.image}
-              alt={microsoftFundamentalsData.title}
-              className="h-full w-full object-cover"
+              src={cookingHousewifeData.image}
+              alt={cookingHousewifeData.title}
+              className="h-150 w-full object-cover"
             />
           </div>
 
@@ -107,17 +106,17 @@ export default function MicrosoftFundamentalsPage() {
             </h3>
             <div className="grid grid-cols-1 gap-3 text-xs font-medium text-gray-700 sm:text-sm lg:grid-cols-2">
               <p className="flex items-start gap-2">
-                <span>✅</span> MS Word Document Formatting & Layout Design
+                <span>✅</span> Authentic Everyday Burmese Home Recipes
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Essential MS Excel Formulas & Data Handling
+                <span>✅</span> Balanced Weekly Menu & Nutrition Planning
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Engaging Visual Presentation Creation in
-                PowerPoint
+                <span>✅</span> Smart Grocery Budgeting & Produce Preservation
               </p>
               <p className="flex items-start gap-2">
-                <span>✅</span> Cloud File Storage & Team Collaboration Tools
+                <span>✅</span> Efficient Kitchen Organization & Time-Saving
+                Hacks
               </p>
             </div>
           </div>
@@ -134,7 +133,7 @@ export default function MicrosoftFundamentalsPage() {
             </div>
 
             <div className="space-y-3">
-              {microsoftFundamentalsData.curriculum.map((module) => {
+              {cookingHousewifeData.curriculum.map((module) => {
                 const isOpen = expandedModules.includes(module.id);
 
                 return (
@@ -190,22 +189,22 @@ export default function MicrosoftFundamentalsPage() {
             <h3 className="text-xl font-black">Provided by</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xl font-black text-white shadow-sm">
-                MC
+                TW
               </div>
               <div className="flex-1 space-y-2">
                 <div>
                   <Link
-                    to="/instructors/mmc"
+                    to="/instructors/wai"
                     className="text-base font-bold text-gray-900"
                   >
-                    {microsoftFundamentalsData.instructor}
+                    {cookingHousewifeData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
-                    {microsoftFundamentalsData.instructorRole}
+                    {cookingHousewifeData.instructorRole}
                   </p>
                 </div>
                 <p className="text-xs leading-relaxed text-gray-600 sm:text-sm">
-                  {microsoftFundamentalsData.instructorBio}
+                  {cookingHousewifeData.instructorBio}
                 </p>
               </div>
             </div>
@@ -219,14 +218,14 @@ export default function MicrosoftFundamentalsPage() {
             <div className="space-y-1">
               <div className="flex items-center gap-3">
                 <span className="text-3xl font-black tracking-tight text-gray-950">
-                  {microsoftFundamentalsData.price.toLocaleString()} Ks
+                  {cookingHousewifeData.price.toLocaleString()} Ks
                 </span>
                 <span className="rounded-md bg-emerald-100 px-2 py-0.5 text-[10px] font-black text-emerald-800">
                   20% OFF
                 </span>
               </div>
               <p className="text-xs font-bold text-gray-400 line-through">
-                {microsoftFundamentalsData.originalPrice.toLocaleString()} Ks
+                {cookingHousewifeData.originalPrice.toLocaleString()} Ks
               </p>
               <p className="text-[11px] text-gray-400">
                 Lifetime access · Instant enrollment
@@ -235,7 +234,7 @@ export default function MicrosoftFundamentalsPage() {
 
             {/* Enroll Button */}
             <button className="w-full rounded-2xl bg-emerald-500 py-3.5 text-xs font-black text-white shadow-md transition-colors hover:bg-emerald-600 sm:text-sm">
-              Enroll Now ({microsoftFundamentalsData.price.toLocaleString()} Ks)
+              Enroll Now ({cookingHousewifeData.price.toLocaleString()} Ks)
             </button>
 
             <div className="my-4 border-t border-gray-100" />
@@ -246,7 +245,7 @@ export default function MicrosoftFundamentalsPage() {
                 This course includes:
               </h4>
               <ul className="space-y-2.5 text-xs font-semibold text-gray-600">
-                {microsoftFundamentalsData.includes.map((feature, idx) => (
+                {cookingHousewifeData.includes.map((feature, idx) => (
                   <li key={idx} className="flex items-center gap-2.5">
                     <span className="text-xs text-emerald-600">✔</span>
                     <span>{feature}</span>

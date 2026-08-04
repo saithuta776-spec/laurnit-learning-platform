@@ -1,63 +1,64 @@
+import AiImg from "@/assets/forDetail/ai.jpg"; // Adjust import path if needed
 import { useState } from "react";
 import { Link } from "react-router";
-import startup from "@/assets/forDetail/startup.jpg";
 
-const startupEntrepreneurship = {
-  title: "Startup Entrepreneurship",
+const aiIntroData = {
+  title: "Artificial Intelligence Introduction (AI)",
   description:
-    "Transform innovative ideas into scalable business models. Learn lean startup methodologies, market validation, fundraising fundamentals, and operational execution to build and launch a successful enterprise.",
-  category: "Business",
-  instructor: "Tr Cho Cho Kha",
-  instructorRole: "Venture Strategist · Startup Mentor",
+    "Discover the foundational concepts of Artificial Intelligence, Machine Learning, and Generative AI. Learn how modern AI models operate, explore prompt engineering techniques, and build practical AI-driven applications using industry tools.",
+  category: "Information Technology",
+  instructor: "Stam Organization",
+  instructorLink: "/instructors/stam",
+  instructorRole: "Enterprise AI & Technology Learning Partner",
   instructorBio:
-    "Tr Cho Cho Kha brings extensive experience mentoring early-stage founders and guiding venture development. She specializes in business model innovation, lean execution, and investor pitch preparation.",
-  price: "600,000 Ks",
-  originalPrice: "800,000 Ks",
-  discount: "25% off",
-  image: startup,
+    "Stam Organization delivers top-tier technical curriculum and industry-standard IT training. Their expert instructors specialize in cutting-edge technology domains including AI development, modern automation, and enterprise solutions.",
+  price: "560,000 Ks",
+  originalPrice: "700,000 Ks",
+  discount: "20% off",
+  image: AiImg,
   includes: [
-    "3.5 months complete program",
-    "60+ hours on-demand video",
-    "20 startup toolkits & financial models",
-    "Pitch deck templates & investor guidelines",
+    "35+ hours on-demand video",
+    "30 downloadable resources",
+    "10 hands-on AI exercises",
     "Full lifetime access",
+    "Access on mobile and desktop",
     "Certificate of completion",
   ],
   series: [
     {
-      id: 601,
-      number: "Course 1",
-      title: "Ideation, Problem-Market Fit & Validation",
+      id: 401,
+      number: "Module 1",
+      title: "Foundations of Artificial Intelligence & Machine Learning",
       lessons: [
-        "Identifying Market Opportunities & Unmet Needs (15:30)",
-        "The Lean Startup Framework & Customer Discovery (22:15)",
-        "Building & Testing Minimum Viable Products (MVP) (26:40)",
+        "Introduction to AI: History, Evolution & Real-World Use Cases (12:30)",
+        "Understanding AI, Machine Learning & Deep Learning (15:45)",
+        "Overview of Neural Networks & Natural Language Processing (18:10)",
       ],
     },
     {
-      id: 602,
-      number: "Course 2",
-      title: "Business Model Canvas & Go-To-Market Execution",
+      id: 402,
+      number: "Module 2",
+      title: "Generative AI, LLMs & Advanced Prompt Engineering",
       lessons: [
-        "Designing the Business Model Canvas (BMC) (24:10)",
-        "Revenue Streams, Cost Structures & Unit Economics (28:05)",
-        "Customer Acquisition Channels & Launch Strategy (20:45)",
+        "How Large Language Models Work (ChatGPT, Claude, Gemini) (16:20)",
+        "Effective Prompt Engineering Strategies & Context Design (22:00)",
+        "Automating Tasks with AI Assistant Tools & Workflows (19:30)",
       ],
     },
     {
-      id: 603,
-      number: "Course 3",
-      title: "Startup Finance, Fundraising & Pitching",
+      id: 403,
+      number: "Module 3",
+      title: "Applied AI Tools, API Integration & Ethics",
       lessons: [
-        "Financial Forecasting & Cash Flow Management (25:50)",
-        "Types of Funding: Bootstrap, Seed & Venture Capital (21:30)",
-        "Crafting a Winning Investor Pitch Deck & Capstone Pitch (35:00)",
+        "Integrating AI APIs into Web & Software Applications (24:15)",
+        "Computer Vision & AI Image Generation Basics (17:40)",
+        "AI Ethics, Data Privacy, and Future Technology Trends (20:00)",
       ],
     },
   ],
 };
 
-export default function Startup() {
+export default function AiIntro() {
   // Accordion State: Stores IDs of opened sub-courses
   const [expandedSeriesIds, setExpandedSeriesIds] = useState<number[]>([101]);
 
@@ -72,7 +73,7 @@ export default function Startup() {
   };
 
   // Get current active specialization configuration data
-  const data = startupEntrepreneurship;
+  const data = aiIntroData;
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Breadcrumb Navigation */}
@@ -209,15 +210,15 @@ export default function Startup() {
             <h3 className="text-xl font-black">Your instructor</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-300 text-xl font-black text-white shadow-sm">
-                {data.instructor.charAt(3)}
+                {data.instructor.charAt(6)}
               </div>
               <div className="flex-1 space-y-2">
                 <div className="">
                   <Link
-                    to="/instructors/choChoKha"
+                    to="/instructors/stam"
                     className="text-base font-bold text-gray-900"
                   >
-                    {startupEntrepreneurship.instructor}
+                    {aiIntroData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
                     {data.instructorRole}

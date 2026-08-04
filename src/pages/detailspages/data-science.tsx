@@ -1,63 +1,84 @@
+import DsImg from "@/assets/forDetail/datascience.jpg"; // Adjust import path if needed
 import { useState } from "react";
 import { Link } from "react-router";
-import startup from "@/assets/forDetail/startup.jpg";
 
-const startupEntrepreneurship = {
-  title: "Startup Entrepreneurship",
+const dataScienceData = {
+  title: "Data Science & Machine Learning Specialization",
   description:
-    "Transform innovative ideas into scalable business models. Learn lean startup methodologies, market validation, fundraising fundamentals, and operational execution to build and launch a successful enterprise.",
-  category: "Business",
-  instructor: "Tr Cho Cho Kha",
-  instructorRole: "Venture Strategist · Startup Mentor",
+    "Master the complete data science pipeline using Python, SQL, and modern machine learning tools. Learn to clean complex data, perform exploratory analysis, build predictive statistical models, and deploy production ML algorithms.",
+  category: "Computer Science",
+  instructor: "Sayar Htet Wai",
+  instructorLink: "/instructors/htetwai",
+  instructorRole: "Data Science Lead · Senior Machine Learning Engineer",
   instructorBio:
-    "Tr Cho Cho Kha brings extensive experience mentoring early-stage founders and guiding venture development. She specializes in business model innovation, lean execution, and investor pitch preparation.",
-  price: "600,000 Ks",
-  originalPrice: "800,000 Ks",
-  discount: "25% off",
-  image: startup,
+    "Sayar Htet Wai brings years of industry experience in enterprise data analytics, AI integration, and predictive modeling. He specializes in turning raw data into strategic insights and production-grade Machine Learning pipelines.",
+  price: "800,000 Ks",
+  originalPrice: "1,000,000 Ks",
+  discount: "20% off",
+  image: DsImg,
   includes: [
-    "3.5 months complete program",
-    "60+ hours on-demand video",
-    "20 startup toolkits & financial models",
-    "Pitch deck templates & investor guidelines",
+    "70+ hours on-demand video",
+    "60 downloadable resources",
+    "20 hands-on coding notebooks",
     "Full lifetime access",
+    "Access on mobile and desktop",
     "Certificate of completion",
   ],
   series: [
     {
-      id: 601,
+      id: 301,
       number: "Course 1",
-      title: "Ideation, Problem-Market Fit & Validation",
+      title: "Data Analysis & Visualization with Python (Pandas & NumPy)",
       lessons: [
-        "Identifying Market Opportunities & Unmet Needs (15:30)",
-        "The Lean Startup Framework & Customer Discovery (22:15)",
-        "Building & Testing Minimum Viable Products (MVP) (26:40)",
+        "Python Data Science Fundamentals & Jupyter Setup (16:20)",
+        "Data Manipulation & Cleaning with Pandas (24:10)",
+        "Exploratory Data Analysis with Matplotlib & Seaborn (18:45)",
       ],
     },
     {
-      id: 602,
+      id: 302,
       number: "Course 2",
-      title: "Business Model Canvas & Go-To-Market Execution",
+      title: "SQL & Relational Databases for Analytics",
       lessons: [
-        "Designing the Business Model Canvas (BMC) (24:10)",
-        "Revenue Streams, Cost Structures & Unit Economics (28:05)",
-        "Customer Acquisition Channels & Launch Strategy (20:45)",
+        "Relational Database Querying & SQL Joins (20:30)",
+        "Advanced Data Aggregations & Window Functions (22:15)",
+        "Connecting Python to Database Architectures (15:40)",
       ],
     },
     {
-      id: 603,
+      id: 303,
       number: "Course 3",
-      title: "Startup Finance, Fundraising & Pitching",
+      title: "Applied Statistics & Mathematical Modeling",
       lessons: [
-        "Financial Forecasting & Cash Flow Management (25:50)",
-        "Types of Funding: Bootstrap, Seed & Venture Capital (21:30)",
-        "Crafting a Winning Investor Pitch Deck & Capstone Pitch (35:00)",
+        "Probability Distributions & Statistical Inference (19:10)",
+        "Hypothesis Testing & A/B Testing Experiments (21:50)",
+        "Feature Engineering & Correlation Analysis (17:30)",
+      ],
+    },
+    {
+      id: 304,
+      number: "Course 4",
+      title: "Machine Learning Foundations with Scikit-Learn",
+      lessons: [
+        "Supervised Learning: Regression & Classification Models (28:40)",
+        "Unsupervised Learning: Clustering & Dimensionality Reduction (22:15)",
+        "Model Evaluation, Cross-Validation & Hyperparameter Tuning (25:00)",
+      ],
+    },
+    {
+      id: 305,
+      number: "Course 5",
+      title: "Deep Learning Intro & Capstone ML Deployment",
+      lessons: [
+        "Introduction to Neural Networks & TensorFlow/PyTorch (20:15)",
+        "Building End-to-End Predictive ML APIs (26:30)",
+        "Final Capstone Project: Production Data Model Review (45:00)",
       ],
     },
   ],
 };
 
-export default function Startup() {
+export default function DataScience() {
   // Accordion State: Stores IDs of opened sub-courses
   const [expandedSeriesIds, setExpandedSeriesIds] = useState<number[]>([101]);
 
@@ -72,7 +93,7 @@ export default function Startup() {
   };
 
   // Get current active specialization configuration data
-  const data = startupEntrepreneurship;
+  const data = dataScienceData;
   return (
     <div className="container mx-auto px-6 py-10">
       {/* Breadcrumb Navigation */}
@@ -209,15 +230,15 @@ export default function Startup() {
             <h3 className="text-xl font-black">Your instructor</h3>
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-emerald-300 text-xl font-black text-white shadow-sm">
-                {data.instructor.charAt(3)}
+                {data.instructor.charAt(6)}
               </div>
               <div className="flex-1 space-y-2">
                 <div className="">
                   <Link
-                    to="/instructors/choChoKha"
+                    to="/instructors/htetWai"
                     className="text-base font-bold text-gray-900"
                   >
-                    {startupEntrepreneurship.instructor}
+                    {dataScienceData.instructor}
                   </Link>
                   <p className="text-xs font-medium text-gray-500">
                     {data.instructorRole}
