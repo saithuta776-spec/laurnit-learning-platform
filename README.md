@@ -1,32 +1,50 @@
-🎓 Laurnit — E-Learning Platform Concept (Frontend Prototype)
-A localized EdTech frontend prototype designed for a University Business Idea Competition.
+# 🎓 Laurnit — E-Learning Platform Concept (Frontend Prototype)
+
+> **A localized EdTech frontend prototype designed for a University Business Idea Competition.**
 
 Laurnit is a web application prototype that simulates a localized online learning marketplace tailored for Myanmar—conceptually framed as a "Coursera for Myanmar." This repository showcases the frontend application architecture, responsive user interfaces, and routing flows developed to demonstrate the business concept during competition evaluation.
 
-💡 Business Idea & Concept
-The Problem: International e-learning platforms often lack localized Myanmar language content, tailored regional pricing options, and dedicated visibility for local educators.
+---
 
-The Concept: A modern learning hub where top local instructors (Sayars and Teachers) can list specialization tracks and modular courses for students and professionals across Myanmar.
+## 💡 Business Idea & Concept
 
-The Prototype: A fully interactive web UI built to demonstrate user journeys, course exploration, instructor profiles, and modular checkout flows to competition judges.
+- **The Problem:** International e-learning platforms often lack localized Myanmar language content, tailored regional pricing options, and dedicated visibility for local educators.
+- **The Concept:** A modern learning hub where top local instructors (_Sayars_ and _Teachers_) can list specialization tracks and modular courses for students and professionals across Myanmar.
+- **The Prototype:** A fully interactive web UI built to demonstrate user journeys, course exploration, instructor profiles, and modular checkout flows to competition judges.
 
-🎨 Key UI/UX Highlights
-📚 Interactive Course Directory: Dynamic views for browsing skill-focused learning paths.
+---
 
-🧩 Modular Enrollment Flow: Features both full specialization bundles and a custom Single Course Option selector that dynamically calculates totals based on user choices.
+## 🎨 Key UI/UX Highlights
 
-👨‍🏫 Dedicated Instructor Pages: Unique landing pages designed to highlight local educators and educational organizations.
+- 📚 **Interactive Course Directory:** Dynamic views for browsing skill-focused learning paths.
+- 🧩 **Modular Enrollment Flow:** Features both full specialization bundles and a custom _Single Course Option_ selector that dynamically calculates totals based on user choices.
+- 👨‍🏫 **Dedicated Instructor Pages:** Unique landing pages designed to highlight local educators and educational organizations.
+- 📱 **Responsive Design:** Mobile-first, modern layout built with clean navigation structures and intuitive breadcrumbs.
 
-📱 Responsive Design: Mobile-first, modern layout built with clean navigation structures and intuitive breadcrumbs.
+---
 
-🛠️ Frontend Tech Stack
-Core Framework: React + TypeScript + Vite
+## 🛠️ Frontend Tech Stack
 
-Navigation & Routing: React Router (react-router)
+- **Core Framework:** React + TypeScript + Vite
+- **Navigation & Routing:** React Router (`react-router`)
+- **Styling & Components:** Tailwind CSS
+- **Hosting & Deployment:** Vercel
 
-Styling & Components: Tailwind CSS
+---
 
-Hosting & Deployment: Vercel
+## 📂 Project Structure
+
+```text
+src/
+├── components/           # Reusable UI components (Header, Footer, cards)
+├── pages/                # Main application views
+│   ├── Home.tsx          # Landing page & hero section
+│   ├── Course.tsx        # Course catalog & filtering
+│   ├── detailspages/     # Specialization overview pages (e.g., Data Analysis)
+│   ├── singleoption/     # Modular single course selection pages
+│   └── instructorsPages/ # Individual instructor profile pages
+├── routes.tsx            # Client-side routing configuration
+└── main.tsx              # Application entry point
 
 📂 Project Structure
 src/
@@ -68,3 +86,4 @@ This project was engineered as part of a University Innovation & Business Compet
 Distributed under the MIT License. See LICENSE for details.
 
 Developed by Sai Thuta Hlaing
+```
