@@ -34,7 +34,7 @@ Laurnit is a web application prototype that simulates a localized online learnin
 
 ## 📂 Project Structure
 
-````text
+```text
 src/
 ├── components/           # Reusable UI components (Header, Footer, cards)
 ├── pages/                # Main application views
@@ -46,36 +46,52 @@ src/
 ├── routes.tsx            # Client-side routing configuration
 └── main.tsx              # Application entry point
 
+```
+
 ---
 
 ## ⚙️ Setup & Local Development
+
 Prerequisites
 Node.js (v18.x or higher)
 npm or yarn
 
-
 ## Quick Start
 
-```text
 1. Clone the repository:
+
+```text
    git clone https://github.com/saithuta776-spec/laurnit.git
    cd laurnit
+```
 
 2. Install dependencies:
-   npm install
+
+```text
+ npm install
+```
 
 3. Run development server:
-   npm run dev
+
+```text
+ npm run dev
+```
 
 4. Build for production:
-   npm run build
+
+```text
+ npm run build
+```
 
 ---
-##🏆 Competition Context
+
+## 🏆 Competition Context
+
 This project was engineered as part of a University Innovation & Business Competition to demonstrate a viable software product lifecycle—from market research and target audience identification to interface design and production deployment.
 
 ---
-##⚖️ License
+
+## ⚖️ License
+
 Distributed under the MIT License. See LICENSE for details.
 Developed by Sai Thuta Hlaing
-````
